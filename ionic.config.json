@@ -1,7 +1,8 @@
 {
   "name": "firebase-login",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
