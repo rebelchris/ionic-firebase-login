@@ -29,6 +29,8 @@
         <ion-card-title>{{user.displayName}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
+        <ion-button (click)="addCount()" expand="block" color="success">{{ count | async }}</ion-button>
+        <br />
         <ion-button (click)="logout()" expand="block" color="danger">Logout</ion-button>
       </ion-card-content>
     </ion-card>
