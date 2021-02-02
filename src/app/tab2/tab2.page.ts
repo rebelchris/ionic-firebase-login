@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Card } from 'pokemon-tcg-sdk-typescript/dist/sdk';
+import { CardService } from '../services/card.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  cards: Card[];
 
-  constructor() {}
+  constructor(private cardService: CardService) {}
 
+  searchCard(event) {
+    this.cardService.searchCard(event.srcElement.value).then(cards => {
+      this.cards = cards;
+    })
+  }
 }

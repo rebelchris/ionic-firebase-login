@@ -13,5 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-searchbar (search)="searchCard($event)"></ion-searchbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let card of cards">
+          <img [src]="card.imageUrl" [title]="card.name">
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+
 </ion-content>
