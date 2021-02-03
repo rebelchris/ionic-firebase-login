@@ -18,12 +18,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
     AngularFirestoreModule,

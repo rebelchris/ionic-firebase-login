@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{card?.name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{ card?.supertype }} - {{ card?.subtype }}</ion-card-subtitle>
+      <ion-card-title>{{ card?.name }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <h4>{{ card?.ability?.name }}</h4>
+      <p>{{ card?.ability?.text }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
